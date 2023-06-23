@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    .button {
+      width: 100px;
+      height: 50px;
+      margin: 5px;
+      cursor: pointer;
+
+</head>
+<body>
+    //1st Question
+<button class="button" id="redButton">Red</button>
+  <button class="button" id="greenButton">Green</button>
+  <button class="button" id="blueButton">Blue</button>
+
+  <script>
+    // Get the buttons by their IDsfff
+    var redButton = document.getElementById('redButton');
+    var greenButton = document.getElementById('greenButton');
+    var blueButton = document.getElementById('blueButton');
+
+    // Add event listeners for mouseover and mouseout
+    redButton.addEventListener('mouseover', changeBackgroundColor);
+    redButton.addEventListener('mouseout', restoreBackgroundColor);
+    greenButton.addEventListener('mouseover', changeBackgroundColor);
+    greenButton.addEventListener('mouseout', restoreBackgroundColor);
+    blueButton.addEventListener('mouseover', changeBackgroundColor);
+    blueButton.addEventListener('mouseout', restoreBackgroundColor);
+
+function changeBackgroundColor(event) {
+      var buttonId = event.target.id;
+      var body = document.getElementsByTagName('body')[0];
+
+      switch (buttonId) {
+        case 'redButton':
+          body.style.backgroundColor = 'red';
+          break;
+        case 'greenButton':
+          body.style.backgroundColor = 'green';
+          break;
+        case 'blueButton':
+          body.style.backgroundColor = 'blue';
+          break;
+        default:
+          break;
+      }
+    }
+
+    // Function to restore the background color
+    function restoreBackgroundColor() {
+      var body = document.getElementsByTagName('body')[0];
+      body.style.backgroundColor = '';
+    }
+
+
+
+
+</script>
+    
+</body>
+</html>
