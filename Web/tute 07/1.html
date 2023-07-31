@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popup Message Box Example</title>
+</head>
+<body>
+  <button id="showPopupButton">Click Me!</button>
+
+  <script>
+   
+    function showPopupMessage() {
+      alert('Hello, this is a popup message box!');
+    }
+
+    const showPopupButton = document.getElementById('showPopupButton');
+
+    showPopupButton.addEventListener('click', showPopupMessage);
+  </script>
+</body>
+</html>

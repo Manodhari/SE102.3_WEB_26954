@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circle Area Calculator</title>
+</head>
+<body>
+  <button onclick="calculateAreaUsingExactPi()">Calculate Area (Exact Pi)</button>
+  <button onclick="calculateAreaUsingApproximatePi()">Calculate Area (Approximate Pi)</button>
+
+  <script>
+    function calculateAreaUsingExactPi() {
+      const radius = parseFloat(prompt("Enter the radius of the circle:"));
+      if (!isNaN(radius)) {
+        const pi = 22 / 7;
+        const area = pi * radius * radius;
+        alert(`The area of the circle (using exact pi) is: ${area.toFixed(2)}`);
+      } else {
+        alert("Invalid input. Please enter a valid number.");
+      }
+    }
+
+    function calculateAreaUsingApproximatePi() {
+      const radius = parseFloat(prompt("Enter the radius of the circle:"));
+      if (!isNaN(radius)) {
+        const pi = 3.14159;
+        const area = pi * radius * radius;
+        alert(`The area of the circle (using approximate pi) is: ${area.toFixed(2)}`);
+      } else {
+        alert("Invalid input. Please enter a valid number.");
+      }
+    }
+  </script>
+</body>
+</html>

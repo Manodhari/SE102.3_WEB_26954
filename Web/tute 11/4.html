@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day of the Week</title>
+</head>
+<body>
+  <form method="post">
+    <label>Enter a number (1 to 7):</label>
+    <input type="number" name="dayNumber" required min="1" max="7">
+    <input type="submit" value="Show Day of the Week">
+  </form>
+
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $dayNumber = $_POST["dayNumber"];
+
+    switch ($dayNumber) {
+      case 1:
+        echo "Monday";
+        break;
+      case 2:
+        echo "Tuesday";
+        break;
+      case 3:
+        echo "Wednesday";
+        break;
+      case 4:
+        echo "Thursday";
+        break;
+      case 5:
+        echo "Friday";
+        break;
+      case 6:
+        echo "Saturday";
+        break;
+      case 7:
+        echo "Sunday";
+        break;
+      default:
+        echo "Invalid number. Please enter a number between 1 and 7.";
+        break;
+    }
+  }
+  ?>
+</body>
+</html>

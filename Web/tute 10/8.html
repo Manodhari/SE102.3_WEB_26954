@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extract Year of Birth from NIC Number</title>
+</head>
+<body>
+  <label>Enter NIC Number:</label>
+  <input type="text" id="nicNumber" />
+  <button onclick="displayYearOfBirth()">Get Year of Birth</button>
+
+  <script>
+    function displayYearOfBirth() {
+      const nicNumber = document.getElementById('nicNumber').value;
+
+      
+      if (nicNumber.length !== 10) {
+        alert("Invalid NIC number. Please enter a valid 10-digit NIC number.");
+        return;
+      }
+
+     
+      const yearOfBirth = nicNumber.slice(0, 4);
+
+     
+      alert(`Year of Birth: ${yearOfBirth}`);
+    }
+  </script>
+</body>
+</html>
